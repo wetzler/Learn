@@ -6,7 +6,7 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/jumbotron.css" rel="stylesheet">
-    
+    <link href="css/custom.css" rel="stylesheet"> 
 
     <script type="text/javascript">
         // Include the Keen IO library for Event Tracking
@@ -52,8 +52,19 @@
       <div class="container">
         <h1 id="mainHeader">Hello, world!</h1>
         <p>You know you want to click that button.</p>
-        <p><a class="btn btn-primary btn-lg" role="button" onclick="trackBigButton()">Learn more &raquo;</a></p>
+        <p><a class="btn btn-primary btn-lg" role="button" onclick="engage()">Engage &raquo;</a></p>
       </div>
+    </div>
+
+    <div class ="displayPortal">
+        <div class ="container">
+            <table>
+                <tr class="row">
+                    <td id="gifPortal"></td>
+                    <td class="h1 gifText" id="gifText"></td>
+                </tr>
+            </table>        
+        </div>
     </div>
 
     <div class="container">
@@ -96,13 +107,16 @@
         
         document.getElementById("mainHeader").innerHTML = headerText;
         
-        var trackBigButton = function () {
+        var engage = function () {
             // create an event as a JS object
             var bigButtonClick = {
                 h1: headerText
             };
             Keen.addEvent("bigButtonClicks", bigButtonClick);
+            document.getElementById("gifPortal").innerHTML = '<img src="img/doggylime.gif">';
         };  
+        
+        
     </script>
 
     <!-- Bootstrap core JavaScript
