@@ -55,20 +55,22 @@
         <p>Here are some data points.</p>
       </div>
     </div>
-
-    <div class ="displayPortal">
-      <div class ="container">
-        <table>
-          <tr class="row">
-            <td id="total"></td>
-            <td id="byH1"></td>
-          </tr>
-          <tr class="row">
-            <td id="lineChart"></td>
-          </tr>
-        </table>        
+    
+    <div class ="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div id="total"></div>
+        </div>
+        <div class="col-md-6">
+          <div id="byH1"></div>
+        </div>
       </div>
-    </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div id="lineChart"></div>
+        </div>  
+      </div>
+    </div>  
 
     <script type="text/javascript" charset="utf-8">
       
@@ -101,10 +103,10 @@
           });
           
           var myLineChart = new Keen.LineChart(series, {
-              height: 200,
-              width: 400,
+              // height: 200,
+              // width: 400,
               lineWidth: 2,
-              chartAreaLeft: 20,
+              // chartAreaLeft: 20,
               backgroundColor: "transparent",
               showLegend: false,
               title: "engagement button clicks last 60min"

@@ -17,9 +17,59 @@ Here are some simple goals we used at Keen IO:
 4. After validating that we could get customers to pay for the product, our goal was to maximize the amount of revenue we could get - by finding bigger customers, upgrading existing ones, and driving new signups that would become new paying customers.
 
 
-
 Exercise 2
 ==========
 1. What actions & properties should you record to measure your progress toward your goal?
+In our previous example, I shared four goals! These are the key events we tracked to measure each one.
+
+Signups Goal: Track an event every time a user submits their email in our beta signup form. We didn't have many properties at the time, mostly just their email address.
+Increase Number Users Goal: We used a couple of different actions for this one: Logins, SendingData, and AnalysisCalls. Ultimately, SendingData was the most important because it's how we monetized our API usage. However, tracking user analysis activity was an easy way to find the most engaged users. On every event we tracked unique account & project information so it was easy to rank accounts and do retention analysis.
+Payment Conversion: We started out with manually tracking customer conversions in a spreadsheet, but eventually graduated to using Stripe event data. Stripe emits an event every time a user upgrades their "plan". We chart the number of customers who go from a free plan to a paid plan to get an idea of our conversion percentages and timelines.
+Overall Revenue: Revenue is easy to measure with Stripe event data. Stripe emits an event for every payment which includes the unique customer ID, payment amount, type, plan amount, description, any discounts applied, etc.
+
+
+Exercise 3
+==========
+A purchase event might look something like this:
+
+purchase = {
+    "timestamp" : "2013-11-11T09:38:06Z",
+    "item": {
+        "type": "hat",
+        "color": "red",
+        "id": 443553,
+        "description": "Wintry Pixie Dust Miley Cyrus Glimmer Hat",
+        "price": 99  
+    },
+    "campaign":{
+        "id": 299,
+        "description": "Miley Cyrus Winter"
+    }
+    "purchaser" :{
+        "id": 998345,
+        "account": "avril.lavigne@gmail.com",
+        "account_create_date": 9028340,
+        "level" : 8
+    }
+}
+
+Note: best practice is to use cents instead of dollars for monetary units.
+
+
+Exercise 4
+==========
+There are tons of possibilities here!
+I'd be interested in segmenting users by level to see what level of users make the most purchases. You can run a query like "count the number of purchases grouped by user level". It will return something like
+    level 1: 30 purchases
+    level 2: 8 purchases
+    level 3: 6 purchases
+    ...
+
+A common filter you might apply would be a campaign or item filter. For example, we might run a query like "sum the purchase revenue from campaign id 299". 
+That's example of using a filter to limit the data set to items with a specific property.
+
+
+
+ 
 
 
