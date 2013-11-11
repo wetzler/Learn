@@ -1,0 +1,25 @@
+Exercise 1
+==========
+Think of a goal for the product you are working on right now, or a product that you use regularly.
+
+Answer:
+=======
+An obvious goal for any for many businesses is to increase revenue, but there are many paths to that goal.
+I can tell you my experience running a startup and the goals we had as our business matured.
+Metrics, of course, will never be able to capture certain aspects of making a great product, like customer delight.
+However, there often times simple counts can provide a easy guideposts for measuring your progress.
+
+Here are some simple goals we used at Keen IO:
+
+1. Starting out, we just had a landing page and our goal was to see if people would sign up for an analytics service. Our goal was to get as many signups for our beta service as possible.
+2. Our next goal was to get as many as people as possible to try it out. Our new goal became to get 1000 users to try the service.
+3. After iterating and getting the product to a certain level of usability, our goal was to convert active users to paying customers. Our new goal became to get as many unique paying customers as possible. 
+4. After validating that we could get customers to pay for the product, our goal was to maximize the amount of revenue we could get - by finding bigger customers, upgrading existing ones, and driving new signups that would become new paying customers.
+
+
+
+Exercise 2
+==========
+1. What actions & properties should you record to measure your progress toward your goal?
+
+
