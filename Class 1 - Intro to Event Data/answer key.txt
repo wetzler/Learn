@@ -68,8 +68,21 @@ I'd be interested in segmenting users by level to see what level of users make t
 A common filter you might apply would be a campaign or item filter. For example, we might run a query like "sum the purchase revenue from campaign id 299". 
 That's example of using a filter to limit the data set to items with a specific property.
 
+Exercise 5
+==========
+June Churn:
+Total users at the end of June minus total users at the beginning of June = 475 total users - 48 new users - 450 existing users = 23 users lost in June.
+23/450 = 5.1% Churn in June
 
 
- 
+Exercise 6
+==========
+What's the total revenue from all purchases?
+What's the total revenue from whistle purchases?
+How many unique customers made purchases?
+Which customers purchased the most products?
+Which customers spent the most money?
+What are the most popular products?
+Are sales increasing or decreasing?
 
 

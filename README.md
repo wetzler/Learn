@@ -1,4 +1,5 @@
 Learn
 ========
 
-Sample Code for Analytics Classes
+Here you will find slides, sample code, and answer keys for learn.thoughbot.com analytics classes.
+
