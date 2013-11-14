@@ -107,11 +107,13 @@ You can find the sample event data [in this google doc](https://docs.google.com/
 Or try it using [keen.io workbench](https://keen.io/project/527f4a5705cd666b59000003/workbench):
 keen.io.student@gmail.com  password: learningstuff
 
-What's the total revenue from all purchases, excluding the “High Rollers” campaign?  $203.09
-What's the total revenue from the Harry Potter campaign? $79.54
-How many unique customers made purchases? 7
-Which customers purchased the most products? devops.borat@gmail.com
-Which customers spent the most money? don.draper@scdp.com
-What are the most popular products? sorting hat & dumbledore hat
-Are sales increasing or decreasing? decreasing
+### Exercise 6 Questions & Answers
+
+* What's the total revenue from all purchases, excluding the “High Rollers” campaign?  $203.09
+* What's the total revenue from the Harry Potter campaign? $79.54
+* How many unique customers made purchases? 7
+* Which customers purchased the most products? devops.borat@gmail.com
+* Which customers spent the most money? don.draper@scdp.com
+* What are the most popular products? sorting hat & dumbledore hat
+* Are sales increasing or decreasing? decreasing
 
