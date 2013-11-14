@@ -20,13 +20,7 @@
       //   writeKey: "<your write key>", // required for sending events
       //   readKey: "<your read key>" // required for querying/charting events
       // });
-      
-      Keen.configure({
-        projectId: "527f4a6273f4bb06f3000003",
-        writeKey: "6c655c731a95a4c4ddf4251e9476e2cffb9c690632bd365e632529d0814be7ae360992ba6d48720b87d5f33a220666f56e5fc3c06efba4bd2253d1c9940d4601ab70d713ddac227f34e05f5ec57a695b250cfa3c0c1859f6dd6ed8b93cf8c9c2b4ff3fdec71f556350ea2a773e179508", // required for sending events
-        readKey: "43e0dfbff5e6faf47d4a2b441c506d3ec34b67e7976fcd320eb7e2e3036005aedb0c8400394ca4b9694e064b70aa8992feb6a5b0bae9d37266b780b344e1e50a600cdd15b6fc9c8fd2434b5cc39584cb833d1a769443f05d5416c1e5a6435feed8e51ad85afe13e95beda19fe55f3c96" // required for querying/charting events
-      });
-      
+    
       
     </script>
     
@@ -96,7 +90,7 @@
         <div class="col-md-4">
           <h2>Dashboard</h2>
           <p>Let's see how we're doing.</p>
-          <p><a class="btn btn-default" href="stats.html" role="button">View details &raquo;</a></p>
+          <p><a class="btn btn-default" id="bigButton" href="stats.html" role="button">View details &raquo;</a></p>
         </div>
       </div>
 
@@ -130,10 +124,10 @@
             // create an event as a JS object
             var engageClick = {
                 h1: headerText,
-                buttonText: document.getElementById("mainButton").innerHTML
+                buttonText: document.getElementById("bigButton").innerHTML  // Optional! For fun! Adds the button text.
             };
             
-            Keen.addEvent("bigButtonClicks", engageClick);
+            Keen.addEvent("engagements", engageClick);
             
             // // End of Exercise 2 Solution [part 2 of 2]
             // // [] [] [] [] [] [] [] [] [] [] [] [] 

@@ -12,12 +12,13 @@
       // Include the Keen IO library for Analysis
       var Keen=Keen||{configure:function(e){this._cf=e},addEvent:function(e,t,n,i){this._eq=this._eq||[],this._eq.push([e,t,n,i])},setGlobalProperties:function(e){this._gp=e},onChartsReady:function(e){this._ocrq=this._ocrq||[],this._ocrq.push(e)}};(function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src=("https:"==document.location.protocol?"https://":"http://")+"dc8na2hxrj29i.cloudfront.net/code/keen-2.1.0-min.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
 
-      // Configure the Keen object with your Project ID and (optional) access keys.
+      // Configure the Keen object with your Project ID and access keys.
       Keen.configure({
-        projectId: "<your project ID>",
-        writeKey: "<your write key>", // required for sending events
-        readKey: "<your read key>" // required for querying/charting events
+          projectId: "your_project_ID",
+          writeKey: "your_write_key", // required for sending events
+          readKey: "your_read_key"    // required for doing analysis
       });
+      
     </script>
     
   </head>
@@ -81,13 +82,13 @@
     
     // LOOK HERE! This is where you will need to write the code to draw the charts using the Keen IO charting library.
       
-      Keen.onChartsReady(function() {
+      Keen.onChartsReady(function() {  // This function executes once the page is fully loaded
         
         // [] [] Item 1 [] [] [] [] [] [] [] [] [] [] [] [] 
-        // The first widget is almost finished. Just insert your collection name and it should work.
-        // The is a counter for the total number of button clicks (all time running total).
+        // The first widget here is almost finished. Just insert your collection name and it should work.
+        // This is a counter for the total number of button clicks (all time running total).
         
-        var metric1 = new Keen.Metric("<your collection name>", {
+        var metric1 = new Keen.Metric("engagements", {
             analysisType: "count"  // Query parameters go in here. In this example we just have one (analysisType).
         });
 
@@ -99,41 +100,31 @@
         // [] [] Item 2 [] [] [] [] [] [] [] [] [] [] [] [] 
         // Find the total number of engagements sorted by header
         // Draw it as a PieChart
+        // Reference Keen IO Javascript Reference Docs to find out how to do this
         
-        var countByH1 = new Keen.Metric("bigButtonClicks", {
-            analysisType: "count",
-            groupBy: "h1",
-        });
 
-        //Draw a pie chart in a <div/> with an ID of "byH1"
-        var myPieChart = new Keen.PieChart(countByH1, {
-            height: 250,
-            width: 600,
+        var metric2 = new Keen.Metric("engagements", {
+            analysisType: "count",
+            groupBy: "h1Text"
         });
-        myPieChart.draw(document.getElementById("chart2"));
+        metric2.draw(document.getElementById("chart2"));
+        
+
         
         
         // [] [] Item 3 [] [] [] [] [] [] [] [] [] [] [] [] 
         // Find the total number of engagements over time
-        // Draw it as a LineChart
+        // Reference Keen IO Javascript Reference Docs to find out how to do this
         
-        var series = new Keen.Series("bigButtonClicks", {
-          analysisType: "count",
-          timeframe: "this_60_minutes",
-          interval: "minutely"
+        Keen.onChartsReady(function() {
+          var series = new Keen.Series("engagements", {
+            analysisType: "count",
+            timeframe: "last_30_minutes",
+            interval: "minutely"
+          });
+          series.draw(document.getElementById("chart3"));
         });
         
-        var myLineChart = new Keen.LineChart(series, {
-            height: 200,
-            width: 400,
-            lineWidth: 2,
-            chartAreaLeft: 20,
-            backgroundColor: "transparent",
-            showLegend: false,
-            title: "engagement button clicks last 60min"
-        });
-        
-        myLineChart.draw(document.getElementById("chart3"));
           
       });
       

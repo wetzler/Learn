@@ -26,6 +26,10 @@ Summary of course exercises:
 * Exercise 4: What property or properties might you for filtering or segmentation?
 * Exercise 5: Calculate churn
 * Exercise 6: Use the data in [this spreadsheet](https://docs.google.com/a/keen.io/spreadsheet/ccc?key=0ApRCxVPqTJJWdFhYeUxWSHRCaDJTaUc4NU1lS2V3MGc#gid=0) doc to answer the following questions.
+
+Or try it using [Keen IO workbench](https://keen.io/project/527f4a5705cd666b59000003/workbench):
+keen.io.student@gmail.com  password: learningstuff
+
   * What's the total revenue from all purchases, excluding the “High Rollers” campaign?
   * How many unique customers made purchases?
   * Which customers purchased the most products?

@@ -8,7 +8,6 @@ Wondering what lies beyond Google Analytics? In this hands-on workshop you'll us
 Takeaways:
 - How to instrument an app to collect event data for any interaction
 - How to embed analytics charts into your website
-- Querying by API
 
 Level & Prerequisites: 
 - You should be familiar with analytics concepts like event data
