@@ -1,8 +1,7 @@
 Intro to Analytics 
 ==================
 
-Course Description
-------------------
+### Course Description
 
 Do you know what features in your mobile app or website are used most? Do you know what landing page converts more visitors? In this introduction to analytics class, you'll review some of the ways you can use analytics to improve your product. You'll learn analytics terms like engagement, retention, conversion, cohorts, and segmentation. You'll also explore a sample data set and do some simple exercises that illustrate data modeling and querying. 
 
@@ -12,14 +11,11 @@ Takeaways:
 * Common terms in analytics like engagement, retention, conversion, cohorts, segmentation
 * How can you use event data to measure the above items?
 
-Level & Prerequisites
----------------------
+### Level & Prerequisites
 
 You should be curious about big data or analytics and have at least some exposure to data.  You have probably used Excel or Google Analytics at some point and are most likely working at either a software company, or on the mobile app or website for your company. Bring your laptop and a desire to learn!
 
-
-Agenda:
--------
+### Agenda:
 
 We'll walk through some slides to introduce analytics concepts and work on exercises throughout.
 Summary of course exercises:
