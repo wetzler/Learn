@@ -21,7 +21,7 @@ You should be curious about big data or analytics and have at least some exposur
 Agenda:
 -------
 
-We'll walk through some slides to introduce analytics concepts and work on exercises throughout the course.
+We'll walk through some slides to introduce analytics concepts and work on exercises throughout.
 Summary of course exercises:
 
 * Exercise 1: Think of a goal for the product you are working on right now. 
@@ -31,10 +31,10 @@ Summary of course exercises:
 * Exercise 5: Calculate churn
 * Exercise 6: Use the data in [this spreadsheet](https://docs.google.com/a/keen.io/spreadsheet/ccc?key=0ApRCxVPqTJJWdFhYeUxWSHRCaDJTaUc4NU1lS2V3MGc#gid=0) doc to answer the following questions.
 
-    What's the total revenue from all purchases? 
-    What's the total revenue from whistle purchases? 
-    How many unique customers made purchases? 
-    Which customer made the most purchases? 
-    Which customer spent the most money? 
-    What are the most popular products?
-    Are sales increasing or decreasing?
+* What's the total revenue from all purchases? 
+* What's the total revenue from whistle purchases? 
+* How many unique customers made purchases? 
+* Which customer made the most purchases? 
+* Which customer spent the most money? 
+* What are the most popular products?
+* Are sales increasing or decreasing?
