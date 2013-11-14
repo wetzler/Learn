@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Analytics 101</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/jumbotron.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet"> 
+
+    <script type="text/javascript">
+      // Include the Keen IO library for Analysis
+      var Keen=Keen||{configure:function(e){this._cf=e},addEvent:function(e,t,n,i){this._eq=this._eq||[],this._eq.push([e,t,n,i])},setGlobalProperties:function(e){this._gp=e},onChartsReady:function(e){this._ocrq=this._ocrq||[],this._ocrq.push(e)}};(function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src=("https:"==document.location.protocol?"https://":"http://")+"dc8na2hxrj29i.cloudfront.net/code/keen-2.1.0-min.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
+
+      // Configure the Keen object with your Project ID and (optional) access keys.
+      Keen.configure({
+        projectId: "<your project ID>",
+        writeKey: "<your write key>", // required for sending events
+        readKey: "<your read key>" // required for querying/charting events
+      });
+    </script>
+    
+  </head>
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">What a nice website!</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Sign in</button>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1 id="mainHeader">Stats!</h1>
+        <p>Here are some data points.</p>
+      </div>
+    </div>
+    
+    <!-- LOOK HERE! I've made three placeholders for your charts in the container below. -->
+    <!-- You do not need to write any code in this section. Use the <script> section below. -->
+    <!-- You will reference these placeholders by div id when you use Javascript to generate the charts. -->
+    
+    <div class ="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div id="chart1"></div> <!-- LOOK HERE! It's a placeholder for a new chart. -->
+        </div>
+        <div class="col-md-6">
+          <div id="chart2"></div> <!-- LOOK HERE! It's a placeholder for a new chart. -->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div id="chart3"></div> <!-- LOOK HERE! It's a placeholder for a new chart. -->
+        </div>  
+      </div>
+    </div> 
+
+    
+    <script type="text/javascript" charset="utf-8">
+    
+    // LOOK HERE! This is where you will need to write the code to draw the charts using the Keen IO charting library.
+      
+      Keen.onChartsReady(function() {
+        
+        // [] [] Item 1 [] [] [] [] [] [] [] [] [] [] [] [] 
+        // The first widget is almost finished. Just insert your collection name and it should work.
+        // The is a counter for the total number of button clicks (all time running total).
+        
+        var metric1 = new Keen.Metric("<your collection name>", {
+            analysisType: "count"  // Query parameters go in here. In this example we just have one (analysisType).
+        });
+
+        metric1.draw(document.getElementById("chart1"), {  // 
+            label: "Total Engagements All Time"
+        });
+        
+        
+        // [] [] Item 2 [] [] [] [] [] [] [] [] [] [] [] [] 
+        // Find the total number of engagements sorted by header
+        // Draw it as a PieChart
+        
+        var countByH1 = new Keen.Metric("bigButtonClicks", {
+            analysisType: "count",
+            groupBy: "h1",
+        });
+
+        //Draw a pie chart in a <div/> with an ID of "byH1"
+        var myPieChart = new Keen.PieChart(countByH1, {
+            height: 250,
+            width: 600,
+        });
+        myPieChart.draw(document.getElementById("chart2"));
+        
+        
+        // [] [] Item 3 [] [] [] [] [] [] [] [] [] [] [] [] 
+        // Find the total number of engagements over time
+        // Draw it as a LineChart
+        
+        var series = new Keen.Series("bigButtonClicks", {
+          analysisType: "count",
+          timeframe: "this_60_minutes",
+          interval: "minutely"
+        });
+        
+        var myLineChart = new Keen.LineChart(series, {
+            height: 200,
+            width: 400,
+            lineWidth: 2,
+            chartAreaLeft: 20,
+            backgroundColor: "transparent",
+            showLegend: false,
+            title: "engagement button clicks last 60min"
+        });
+        
+        myLineChart.draw(document.getElementById("chart3"));
+          
+      });
+      
+    </script>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    
+  </body>
+</html>

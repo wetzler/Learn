@@ -6,29 +6,39 @@ Course Description
 Wondering what lies beyond Google Analytics? In this hands-on workshop you'll use Keen IO to collect custom event data and learn how you can use APIs to programmatically query your data and build analytics features into your app. 
 
 Takeaways:
-How to instrument an app to collect event data for any interaction
-Querying by API
-How to embed analytics charts into your website
+- How to instrument an app to collect event data for any interaction
+- How to embed analytics charts into your website
+- Querying by API
 
-Level & Prerequisites: You should be familiar with analytics concepts like event data and have at least beginner level javascript & github skills.
+Level & Prerequisites: 
+- You should be familiar with analytics concepts like event data
+- Have at least beginner level javascript skills
+- Have at least beginner level github skills and a github account
 
 
 Exercise 1
 ==========
 
-The owner of SampleSite site REALLY wants users to click the engage button so they can see her AWESOME dog gif.
+The owner of SampleSite site REALLY wants users to click the engage button so they can see her AWESOME gif.
 She wants to know how many people are clicking the engage button over time, and also if different headers make visitors more or less likely to click the button.
 
 For Exercise 1, Instrument a Keen IO Event to track each time a user clicks the engage button. Include the h1 header values as a property on the event.
 
 Steps:
 
-1. [Fork this repo](https://help.github.com/articles/fork-a-repo) so you can work with the sample files locally. 
-2. Create a free [Keen IO](https://www.keen.io) account so you can get a project ID & write.
-3. Copy the Keen IO [Javascript](https://keen.io/docs/clients/javascript/usage-guide/) client snippet into the index.html script section. Specify your specific Keen IO project ID and write key in the configuration.
-4. As a part of the onclick function, call the Keen IO add event method to track the button click.
-5. Save the file. Open the file in your local browser and click the engage button locally a buncha times.
-6. Go to [Keen IO](https://www.keen.io) to validate that the events are being tracked when you click the engage button.
+1. Go to the [github repo]() and click Fork to copy the sample website to your github account. [How to Fork](https://help.github.com/articles/fork-a-repo)
+
+2. It terminal, clone the repo (this will download the files to your computer). Type 'git clone https://github.com/<youraccount>/Learn.git'
+  
+3. We'll use Keen IO as an event data store. Create a free [Keen IO](https://www.keen.io) account so you can send your event data there.
+
+4. Copy the Keen IO [Javascript](https://keen.io/docs/clients/javascript/usage-guide/) client snippet into the index.html script section. Specify your specific Keen IO project ID and write key in the configuration.
+
+5. As a part of the onclick function, call the Keen IO add event method to track the button click. Reference the [Keen IO Javascript Usage Guide]().
+
+6. Save the file. Open the file in your local browser and click the engage button locally a buncha times.
+
+7. Go to [Keen IO](https://www.keen.io) to validate that the events are being tracked when you click the engage button.
 
 The solution can be found in the Solution 1 folder.
 

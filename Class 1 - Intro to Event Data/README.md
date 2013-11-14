@@ -13,6 +13,8 @@ Level & Prerequisites: You should be curious about big data or analytics and hav
 
 
 Agenda:
+=======
+
 1. Some context on big data & analytics
 2. Exercise 1: Think of a goal for the product you are working on right now. Write it down. 
 3. Intro to Event Data 
@@ -23,7 +25,7 @@ Agenda:
 8. More analytics methods 
 9. Exercise 5: Calculate churn
 10. Summary
-11. Final Exercise. Use the data in this google doc to answer the following questions.
+11. Final Exercise. Use the data in [this google](link) doc to answer the following questions.
 
     What's the total revenue from all purchases? $5,818.53
     What's the total revenue from whistle purchases? $7

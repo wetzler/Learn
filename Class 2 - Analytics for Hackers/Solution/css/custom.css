@@ -1,0 +1,14 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+
+
+.displayPortal {
+  margin-bottom: 30px;
+}
+
+.gifText {
+  padding-left: 30px;
+}
+
+#total div {
+  margin: 37px auto 0px;
+}

@@ -48,7 +48,6 @@ purchase = {
     "purchaser" :{
         "id": 998345,
         "account": "avril.lavigne@gmail.com",
-        "account_create_date": 9028340,
         "level" : 8
     }
 }
@@ -77,12 +76,17 @@ Total users at the end of June minus total users at the beginning of June = 475 
 
 Exercise 6
 ==========
+You can find the sample event data [in this google doc](https://docs.google.com/a/keen.io/spreadsheet/ccc?key=0ApRCxVPqTJJWdFhYeUxWSHRCaDJTaUc4NU1lS2V3MGc#gid=0)
+
+Or try it using [keen.io workbench](https://keen.io/project/527f4a5705cd666b59000003/workbench):
+keen.io.student@gmail.com  password: learningstuff
+
 What's the total revenue from all purchases?
 What's the total revenue from whistle purchases?
 How many unique customers made purchases?
-Which customers purchased the most products?
-Which customers spent the most money?
-What are the most popular products?
-Are sales increasing or decreasing?
+Which customers purchased the most products? 
+Which customers spent the most money? there's a pretty even distribution but Don Draper spent the most: $51.72
+What are the most popular products? the sorting hat has been the most frequently purchased item
+Are sales increasing or decreasing? a chart of purchases over the past 30 days shows sales are decreasing
 
 
