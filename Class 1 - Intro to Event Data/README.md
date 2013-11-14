@@ -20,7 +20,7 @@ You should be curious about big data or analytics and have at least some exposur
 We'll walk through some slides to introduce analytics concepts and work on exercises throughout.
 Summary of course exercises:
 
-* Exercise 1: Think of a goal for the product you are working on right now. 
+* Exercise 1: Think of a goal for the product you've worked on or used.
 * Exercise 2: Write down at least one event you can track to measure your progress toward that goal.
 * Exercise 3: Event data modeling
 * Exercise 4: What property or properties might you for filtering or segmentation?
