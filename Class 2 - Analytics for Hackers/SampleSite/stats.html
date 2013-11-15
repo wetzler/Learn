@@ -88,12 +88,12 @@
         // The first widget here is almost finished. Just insert your collection name and it should work.
         // This is a counter for the total number of button clicks (all time running total).
         
-        var metric1 = new Keen.Metric("engagements", {
+        var metric1 = new Keen.Metric("<your collection name>", {
             analysisType: "count"  // Query parameters go in here. In this example we just have one (analysisType).
         });
 
         metric1.draw(document.getElementById("chart1"), {  // 
-            label: "Total Engagements All Time"
+            label: "I need a title!"
         });
         
         
@@ -101,29 +101,13 @@
         // Find the total number of engagements sorted by header
         // Draw it as a PieChart
         // Reference Keen IO Javascript Reference Docs to find out how to do this
-        
 
-        var metric2 = new Keen.Metric("engagements", {
-            analysisType: "count",
-            groupBy: "h1Text"
-        });
-        metric2.draw(document.getElementById("chart2"));
-        
 
-        
         
         // [] [] Item 3 [] [] [] [] [] [] [] [] [] [] [] [] 
         // Find the total number of engagements over time
         // Reference Keen IO Javascript Reference Docs to find out how to do this
-        
-        Keen.onChartsReady(function() {
-          var series = new Keen.Series("engagements", {
-            analysisType: "count",
-            timeframe: "last_30_minutes",
-            interval: "minutely"
-          });
-          series.draw(document.getElementById("chart3"));
-        });
+
         
           
       });
