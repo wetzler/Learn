@@ -23,7 +23,7 @@ Summary of course exercises:
 * Exercise 1: Think of a goal for the product you've worked on or used.
 * Exercise 2: Write down at least one event you can track to measure your progress toward that goal.
 * Exercise 3: Event data modeling
-* Exercise 4: What property or properties might you for filtering or segmentation?
+* Exercise 4: What property or properties might you use for filtering or segmentation?
 * Exercise 5: Calculate churn
 * Exercise 6: Use the data in [this spreadsheet](https://docs.google.com/a/keen.io/spreadsheet/ccc?key=0ApRCxVPqTJJWdFhYeUxWSHRCaDJTaUc4NU1lS2V3MGc#gid=0) doc to answer the following questions.
 
