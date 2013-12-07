@@ -78,15 +78,15 @@ Steps.
 
 2. To construct your beacon image URL, you'll need to create an event body like this:
 
-```json
-{
-    "campaign" : "Testing from analytics class!",
-    "subject" : "Hi",
-    "text" : "espionage blah blah"
-}
+    ```json
+    {
+        "campaign" : "Testing from analytics class!",
+        "subject" : "Hi",
+        "text" : "espionage blah blah"
+    }
 ```
 
-Don't forget to [base64 encode it](http://www.opinionatedgeek.com/dotnet/tools/base64encode/) before putting it into the redirect URL!
+    Don't forget to [base64 encode it](http://www.opinionatedgeek.com/dotnet/tools/base64encode/) before putting it into the redirect URL!
 
 3. Write an email which contains a fake beacon image. You'll need to use an email editor that allows you to put HTML in the email. Like [this one](ctrlq.org/html-mail/).
 
