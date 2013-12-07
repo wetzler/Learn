@@ -1,8 +1,8 @@
 Analytics for Hackers
 =====================
 
-Course Description
-==================
+#### Course Description
+
 Wondering what lies beyond Google Analytics? In this hands-on workshop you'll use Keen IO to collect custom event data and learn how you can use APIs to programmatically query your data and build analytics features into your app. 
 
 Takeaways:
