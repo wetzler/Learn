@@ -1,5 +1,5 @@
-Here you'll find sample code, slides, and exercises for Analytics for Hackers!
-==============================================================================
+Analytics for Hackers
+=====================
 
 Course Description
 ==================
@@ -27,7 +27,7 @@ Steps:
 
 1. Go to the [github repo]() and click Fork to copy the sample website to your github account. [How to Fork](https://help.github.com/articles/fork-a-repo)
 
-2. It terminal, clone the repo (this will download the files to your computer). Type 'git clone https://github.com/<youraccount>/Learn.git'
+2. In terminal, clone the repo (this will download the files to your computer). Type 'git clone https://github.com/youraccount/Learn.git'
   
 3. We'll use Keen IO as an event data store. Create a free [Keen IO](https://www.keen.io) account so you can send your event data there.
 
@@ -44,9 +44,10 @@ The solution can be found in the Solution 1 folder.
 Exercise 2 & 3
 ==============
 
-For the next exercise, we'll build off the changes we made in exercise 1. In this exercise, we'll work on a stats page (stats.html) to display some of the data on the user engagement with engage button.
+We'll build off the changes we made in exercise 1. In this exercise, we'll work on a stats page (stats.html) to display some of the data on the user engagement with engage button.
 
 Steps:
+
 1. Make sure you have the SampleSite folder & files on your local machine. Open stats.html in your browser to take a look at it.
 
 2. Modify the read key and project ID in the file to point to your project.
