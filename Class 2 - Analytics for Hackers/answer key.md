@@ -23,11 +23,11 @@ Here's an example working beacon URL which sends an event to the Keen IO account
 The data being tracked in the data portion of the URL is:
 
 ```json
-    {
-    "campaign" : "Testing from analytics class!",
-    "subject" : "Hi",
-    "text" : "espionage blah blah"
-    }
+{
+"campaign" : "Testing from analytics class!",
+"subject" : "Hi",
+"text" : "espionage blah blah"
+}
 ```
 
 which was base64 encoded using [this encoder](http://www.opinionatedgeek.com/dotnet/tools/base64encode/)

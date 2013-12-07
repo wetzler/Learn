@@ -79,7 +79,7 @@ Steps.
 2. To construct your beacon image URL, you'll need to create an event body like this:
 
 ```json
-data = {
+{
     "campaign" : "Testing from analytics class!",
     "subject" : "Hi",
     "text" : "espionage blah blah"
