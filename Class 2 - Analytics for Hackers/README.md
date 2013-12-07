@@ -41,8 +41,8 @@ Steps:
 
 The solution can be found in the Solution 1 folder.
 
-Exercise 2
-==========
+Exercise 2 & 3
+==============
 
 For the next exercise, we'll build off the changes we made in exercise 1. In this exercise, we'll work on a stats page (stats.html) to display some of the data on the user engagement with engage button.
 
@@ -54,5 +54,26 @@ Steps:
 3. Add two new graphs to the stats page, as specified in the file.
 
 
+Exercise 4
+==========
 
+Given image beacons a try!
+
+Steps. 
+
+1. Go to [Beacon Docs](https://keen.io/docs/data-collection/image-beacon/) for details on how to make a beacon URL.
+
+2. To construct your beacon image URL, you'll need to create an event body like this:
+
+    data = {
+        "campaign" : "Testing from analytics class!",
+        "subject" : "Hi",
+        "text" : "espionage blah blah"
+    }
+
+Don't forget to [base64 encode it](http://www.opinionatedgeek.com/dotnet/tools/base64encode/) before putting it into the redirect URL!
+
+3. Write an email which contains a fake beacon image. You'll need to use an email editor that allows you to put HTML in the email. Like [this one](ctrlq.org/html-mail/).
+
+4. Send it and get someone to open the email. See if the tracking works!
 
