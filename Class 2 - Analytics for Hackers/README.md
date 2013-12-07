@@ -27,7 +27,7 @@ Steps:
 
 1. Go to the [github repo]() and click Fork to copy the sample website to your github account. [How to Fork](https://help.github.com/articles/fork-a-repo)
 
-2. In terminal, clone the repo (this will download the files to your computer). Type 'git clone https://github.com/youraccount/Learn.git'
+2. In terminal, clone the repo (this will download the files to your computer). Type `git clone https://github.com/<youraccount>/Learn.git`
   
 3. We'll use Keen IO as an event data store. Create a free [Keen IO](https://www.keen.io) account so you can send your event data there.
 
@@ -78,11 +78,13 @@ Steps.
 
 2. To construct your beacon image URL, you'll need to create an event body like this:
 
-    data = {
-        "campaign" : "Testing from analytics class!",
-        "subject" : "Hi",
-        "text" : "espionage blah blah"
-    }
+```json
+data = {
+    "campaign" : "Testing from analytics class!",
+    "subject" : "Hi",
+    "text" : "espionage blah blah"
+}
+```
 
 Don't forget to [base64 encode it](http://www.opinionatedgeek.com/dotnet/tools/base64encode/) before putting it into the redirect URL!
 
