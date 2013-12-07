@@ -53,8 +53,20 @@ Steps:
 
 3. Add two new graphs to the stats page, as specified in the file.
 
-
 Exercise 4
+==========
+
+1. Write at least two tweets including links to Hackbright. 
+
+2. The links should include at least two query string parameters:
+       - twitter handle sending the tweet
+       - text of the tweet
+
+3. Tweet the links and click them!
+
+4. Checkout Hackbright’s Google Analytics to confirm the pageviews with your params are there!
+
+Exercise 5
 ==========
 
 Given image beacons a try!
@@ -76,5 +88,13 @@ Don't forget to [base64 encode it](http://www.opinionatedgeek.com/dotnet/tools/b
 3. Write an email which contains a fake beacon image. You'll need to use an email editor that allows you to put HTML in the email. Like [this one](ctrlq.org/html-mail/).
 
 4. Send it and get someone to open the email. See if the tracking works!
+
+
+Exercise 6
+==========
+
+Redirects!
+
+
 
 
