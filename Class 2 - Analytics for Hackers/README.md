@@ -57,15 +57,18 @@ Steps:
 Exercise 4
 ==========
 
-1. Write at least two tweets including links to Hackbright. 
+1. Write a tweet that links to Hackbright.
 
 2. The links should include at least two query string parameters:
        - twitter handle sending the tweet
        - text of the tweet
 
-3. Tweet the links and click them!
+3. Tweet the link and click it!
 
 4. Checkout Hackbright’s Google Analytics to confirm the pageviews with your params are there!
+
+5. What are some drawbacks to using query string params?
+
 
 Exercise 5
 ==========
@@ -92,13 +95,15 @@ Steps.
 
 4. Send it and get someone to open the email. See if the tracking works!
 
+5. What are some drawbacks to using beacons?
+
 
 Exercise 6
 ==========
 
 Redirects!
 
-1. Create two tweets that link to ANY website. 
+1. Create a tweet that links to ANY website. 
 
 2. The link should be a [Keen IO redirect link](https://keen.io/docs/data-collection/redirect/) that includes at least 3 properties.
     - site being linked to "My Rad Blog"
