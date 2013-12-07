@@ -50,7 +50,8 @@ Note: The email sending thing is kinda buggy so you might need to give it a few 
 
 Create a link with a format like 
  
-```HTML                    https://api.keen.io/3.0/projects/<project_id>/events/email_link_clicked?api_key=<write_key>&data=<base64_data_here>&redirect=http://www.mybestsiteever.com
+```HTML
+https://api.keen.io/3.0/projects/<project_id>/events/email_link_clicked?api_key=<write_key>&data=<base64_data_here>&redirect=http://www.mybestsiteever.com
 ```
 
 Here is an example of a valid link that sends and event to the Keen IO account: keen.io.student@gmail.com  password: learningstuff
