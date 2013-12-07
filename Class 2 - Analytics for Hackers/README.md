@@ -44,10 +44,10 @@ The solution can be found in the Solution 1 folder.
 Exercise 2
 ==========
 
-For the next exercise, we'll build off the changes we made in exercise 1. We'll be working from the solution 1 folder and working with the stats.html page. In this exercise, we'll build a stats page to display some of the data on the user engagement with engage button.
+For the next exercise, we'll build off the changes we made in exercise 1. In this exercise, we'll work on a stats page (stats.html) to display some of the data on the user engagement with engage button.
 
 Steps:
-1. Make sure you have the Solution 1 folders & files on your local machine. Open stats.html in your browser to take a look at it.
+1. Make sure you have the SampleSite folder & files on your local machine. Open stats.html in your browser to take a look at it.
 
 2. Modify the read key and project ID in the file to point to your project.
 
