@@ -5,6 +5,7 @@ Here you will find slides, sample code, and answer keys for analytics classes!
 Have fun!
 
 Class 1 - Intro to Event Data introduces analytics concepts & data modeling exercises.
+
 Class 2 - Analytics for Hackers has hands-on data tracking & querying exercises.
 
 Final Project: Apply the concepts you learned to your own app, website, twitter campaign, or whatever else you can think up!
