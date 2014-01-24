@@ -14,6 +14,7 @@ Level & Prerequisites:
 - Have at least beginner level javascript skills
 - Have at least beginner level github skills and a github account
 
+Exercises:
 - [Exercise 1 - Track Clicks](Exercise 1 - Track Clicks.md)
 - [Exercise 2 - Graph Clicks](Exercise 2 - Graph Clicks.md)
 - [Exercise 3 - Query String Params](Exercise 3 - Query String Params.md)
