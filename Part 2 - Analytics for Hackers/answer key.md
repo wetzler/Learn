@@ -1,10 +1,10 @@
 Answer Key
 ==================
 
-### Exercises 1-3:
+### Exercises 1-2:
 See the Solution folder files index.html and stats.html
 
-### Exercise 4
+### Exercise 3
 Here's an example of a link to Hackbright with two query parameters.
 
 ```HTML
@@ -15,7 +15,7 @@ The text field is tricky because the tweet content must be URL encoded first! Do
 Paste `Now here's a group of people that is changing the gender gap!` into the [the URI encoder](http://meyerweb.com/eric/tools/dencoder/) and it comes out like `Now%20here%27s%20a%20group%20of%20people%20that%20is%20changing%20the%20gender%20gap!`
 
 
-### Exercise 5
+### Exercise 4
 Here's an example working beacon URL which sends an event to the Keen IO account: keen.io.student@gmail.com  password: learningstuff
 
 ```HTML
@@ -46,7 +46,7 @@ The email was sent using [this free HTML email sender](http://ctrlq.org/html-mai
 Note: The email sending thing is kinda buggy so you might need to give it a few tries :)
 
 
-### Exercise 6
+### Exercise 5
 
 Create a link with a format like 
  

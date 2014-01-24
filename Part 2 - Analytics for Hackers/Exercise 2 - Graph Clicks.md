@@ -10,3 +10,5 @@ Steps:
 2. Modify the read key and project ID in the file to point to your project.
 
 3. Add two new graphs to the stats page, as specified in the file.
+
+The Solution can be found in the [Solution](./Solution) folder.
