@@ -1,7 +1,7 @@
 Exercise 3
 ==========
 
-1. Write a tweet that links to Hackbright.
+1. Write a tweet that links to Hackbright. Let's see whose tweet gets the most clicks!
 
 2. The links should include at least two query string parameters:
        - twitter handle sending the tweet
@@ -10,7 +10,7 @@ Exercise 3
     example: 
     
     ```
-    https://hackbright.com/?source=@doge&tweet_text=VERY%20PROGRAMMING.%20WOW.%20SUCH%20FEMALES.%20SO%20AMAZE.%20MUCH%20INTELLIGENCE.
+    https://hackbrightacademy.com/?source=@doge&tweet_text=VERY%20PROGRAMMING.%20WOW.%20SUCH%20FEMALES.%20SO%20AMAZE.%20MUCH%20INTELLIGENCE.
     ```
        
 3. Tweet the link and click it!

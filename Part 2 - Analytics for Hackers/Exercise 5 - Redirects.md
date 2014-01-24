@@ -15,7 +15,7 @@ Redirects!
     
 ```json
 {
-    "link_target": "Hackbright homepage",
+    "link_target": "Infosthetics BLog",
     "link_location": "twitter",
     "source": "@michellewetzler"
 }
