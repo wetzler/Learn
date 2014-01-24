@@ -14,19 +14,13 @@ Level & Prerequisites:
 - Have at least beginner level javascript skills
 - Have at least beginner level github skills and a github account
 
+[Exercise 1 - Track "Engage" Clicks](/Exercise 1 - Track Clicks).
+[Exercise 2 - Graph Engage Clicks](Exercise 2 - Graph Clicks).
+[Exercise 3 - ]().
+[Exercise 4 - ]().
+[Exercise 5 - ]().
+[Exercise 6 - ]().
 
-Exercise 2 & 3
-==============
-
-We'll build off the changes we made in exercise 1. In this exercise, we'll work on a stats page (stats.html) to display some of the data on the user engagement with engage button.
-
-Steps:
-
-1. Make sure you have the SampleSite folder & files on your local machine. Open stats.html in your browser to take a look at it.
-
-2. Modify the read key and project ID in the file to point to your project.
-
-3. Add two new graphs to the stats page, as specified in the file.
 
 Exercise 4
 ==========
