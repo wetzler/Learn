@@ -15,7 +15,7 @@ The text field is tricky because the tweet content must be URL encoded first! Do
 Paste `Now here's a group of people that is changing the gender gap!` into the [the URI encoder](http://meyerweb.com/eric/tools/dencoder/) and it comes out like `Now%20here%27s%20a%20group%20of%20people%20that%20is%20changing%20the%20gender%20gap!`
 
 
-### Exercise 4
+### Exercise 4 - Beacons
 Here's an example working beacon URL which sends an event to the Keen IO account: keen.io.student@gmail.com  password: learningstuff
 
 ```HTML
@@ -41,12 +41,12 @@ The final composed image beacon URL can be used an email body like this:
 <p><img src="https://api.keen.io/3.0/projects/527f4a5705cd666b59000003/events/email_opened?api_key=d5d4ecbd8e060c414f841eb3ae79dfbf030b81bddb9cf4a34be084b01929d50b6ac9bc943191083cc01d31e34eeeaff8a3f3d6996ebdcb6b34b5b4f908654ee3228986da8d6db3819e18b09beb43d23dcb133a213eeda238f1492025fffab6d062447ead5ec6aa359c18a2120f0f3fb8&amp;data=ew0KImNhbXBhaWduIiA6ICJUZXN0aW5nIGZyb20gYW5hbHl0aWNzIGNsYXNzISIsDQoic3ViamVjdCIgOiAiSGkiLA0KInRleHQiIDogImVzcGlvbmFnZSBibGFoIGJsYWgiDQp9" alt="" /></p>
 ```
     
-The email was sent using [this free HTML email sender](http://ctrlq.org/html-mail/)
+The email was sent using [this free HTML email sender](http://ctrlq.org/html-mail/). Note: click "Switch to HTML View" and then after putting in your code "Switch to Visual Editor" before sending!
 
 Note: The email sending thing is kinda buggy so you might need to give it a few tries :)
 
 
-### Exercise 5
+### Exercise 5 - Redirects
 
 Create a link with a format like 
  
