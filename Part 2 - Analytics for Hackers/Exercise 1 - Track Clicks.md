@@ -22,4 +22,4 @@ Steps:
 
 7. Go to [Keen IO](https://www.keen.io) to validate that the events are being tracked when you click the engage button.
 
-The solution can be found in the Solution folder.
+The solution can be found in the [Solution](./Solution) folder.
