@@ -13,14 +13,13 @@ Redirects!
     
     For example, your data might look like this prior to enconding:
     
-'''json
+```json
 {
     "link_target": "Hackbright homepage",
     "link_location": "twitter",
     "account_tweeted_from": "@michellewetzler"
 }
-
-'''
+```
     
 
 3. Check in your Keen IO account to confirm tweet clicks are being tracked!
