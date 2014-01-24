@@ -11,11 +11,10 @@ Redirects!
     - tweet text "My analytics teacher is making me tweet this link..."
     - twitter account posting the tweet "@HackerNewsOnion"
     
-    For example:
+    For example, your data might look like this prior to enconding:
     
-'''
-
-data = {
+'''json
+{
     "link_target": "Hackbright homepage",
     "link_location": "twitter",
     "account_tweeted_from": "@michellewetzler"

@@ -7,6 +7,11 @@ Exercise 3
        - twitter handle sending the tweet
        - text of the tweet
 
+    example: 
+    '''
+    https://hackbright.com/?source=@doge&tweet_text=VERY%20PROGRAMMING.%20WOW.%20SUCH%20FEMALES.%20SO%20AMAZE.%20MUCH%20INTELLIGENCE.
+    '''
+       
 3. Tweet the link and click it!
 
 4. Together we will checkout Hackbright’s Google Analytics to confirm the pageviews with your params are there!
