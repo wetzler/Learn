@@ -8,9 +8,10 @@ Exercise 3
        - text of the tweet
 
     example: 
-    '''
-    https://hackbright.com/?source=@doge&tweet_text=VERY%20PROGRAMMING.%20WOW.%20SUCH%20FEMALES.%20SO%20AMAZE.%20MUCH%20INTELLIGENCE.
-    '''
+    
+'''
+https://hackbright.com/?source=@doge&tweet_text=VERY%20PROGRAMMING.%20WOW.%20SUCH%20FEMALES.%20SO%20AMAZE.%20MUCH%20INTELLIGENCE.
+'''
        
 3. Tweet the link and click it!
 
