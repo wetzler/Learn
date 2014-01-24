@@ -14,13 +14,11 @@ Level & Prerequisites:
 - Have at least beginner level javascript skills
 - Have at least beginner level github skills and a github account
 
-[Exercise 1 - Track "Engage" Clicks](Exercise 1 - Track Clicks.md).
-[Exercise 2 - Graph Engage Clicks](Exercise 2 - Graph Clicks.md).
-[Exercise 3 - Query String Params](Exercise 3 - Query String Params.md).
-[Exercise 4 - Beacons](Exercise 4 - Beacons.md)).
-[Exercise 5 - ]().
-[Exercise 6 - ]().
-
+[Exercise 1 - Track "Engage" Clicks](Exercise 1 - Track Clicks.md)
+[Exercise 2 - Graph Engage Clicks](Exercise 2 - Graph Clicks.md)
+[Exercise 3 - Query String Params](Exercise 3 - Query String Params.md)
+[Exercise 4 - Beacons](Exercise 4 - Beacons.md)
+[Exercise 5 - Redirects](Exercise 5 - Redirects.md)
 
 
 
