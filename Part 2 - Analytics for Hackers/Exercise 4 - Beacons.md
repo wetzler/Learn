@@ -1,7 +1,7 @@
-Exercise 4
-==========
+Exercise 4 - Beacons
+====================
 
-Given image beacons a try!
+Given image beacons a try! Add a Beacon to a README file in your Github repo. Now you can track how many people visit your repo!
 
 Steps. 
 

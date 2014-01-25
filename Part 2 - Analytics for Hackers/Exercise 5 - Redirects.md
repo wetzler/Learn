@@ -1,8 +1,6 @@
 
-Exercise 5
-==========
-
-Redirects!
+Exercise 5 - Redirects
+======================
 
 1. Create a tweet that links to ANY website, for example a blog post your really like. Alternatively, compose an email message that includes a link.
 
@@ -20,7 +18,6 @@ Redirects!
     "source": "@michellewetzler"
 }
 ```
-    
 
 3. Check in your Keen IO account to confirm link clicks are being tracked!
 

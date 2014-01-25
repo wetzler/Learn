@@ -8,20 +8,72 @@
     <link href="css/jumbotron.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet"> 
     
-    <!-- [][][][][][][][][] Install Analytics Library Here! [][][][][][][][][][][] -->
+    <script src="static/js/jquery.js" type="text/javascript"></script>
+    <script src="static/js/purl.js" type="text/javascript"></script>
+    <script src="static/js/ua-parser.js" type="text/javascript"></script>
+    <script src="http://www.broofa.com/Tools/Math.uuid.js"></script>
+    
+    <!-- [][][][][][][][][] Install Keen IO Analytics Library Here! [][][][][][][][][][][] -->
     <script type="text/javascript">
-        var Keen=Keen||{configure:function(e){this._cf=e},addEvent:function(e,t,n,i){this._eq=this._eq||[],this._eq.push([e,t,n,i])},setGlobalProperties:function(e){this._gp=e},onChartsReady:function(e){this._ocrq=this._ocrq||[],this._ocrq.push(e)}};(function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src=("https:"==document.location.protocol?"https://":"http://")+"dc8na2hxrj29i.cloudfront.net/code/keen-2.1.0-min.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
+      var Keen=Keen||{configure:function(e){this._cf=e},addEvent:function(e,t,n,i){this._eq=this._eq||[],this._eq.push([e,t,n,i])},setGlobalProperties:function(e){this._gp=e},onChartsReady:function(e){this._ocrq=this._ocrq||[],this._ocrq.push(e)}};(function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src=("https:"==document.location.protocol?"https://":"http://")+"dc8na2hxrj29i.cloudfront.net/code/keen-2.1.0-min.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
 
-        // Configure the Keen object with your Project ID and access keys.
-        Keen.configure({
-            projectId: "your_project_ID",
-            writeKey: "your_write_key", // required for sending events
-            readKey: "your_read_key"    // required for doing analysis
-        });
+    // Configure the Keen object with your Project ID and access keys.
+    Keen.configure({
+      projectId: "527f4a5705cd666b59000003",
+      writeKey: "d5d4ecbd8e060c414f841eb3ae79dfbf030b81bddb9cf4a34be084b01929d50b6ac9bc943191083cc01d31e34eeeaff8a3f3d6996ebdcb6b34b5b4f908654ee3228986da8d6db3819e18b09beb43d23dcb133a213eeda238f1492025fffab6d062447ead5ec6aa359c18a2120f0f3fb8", // the write key is required for sending events
+    });
+
     </script>
 
   </head>
-  <body>
+    <body>
+      <script>
+        $(document).ready(function(){
+
+          //Add a pageview event in Keen IO
+          var fullUrl = window.location.href;
+          var parsedUrl = $.url(fullUrl);
+          var parser = new UAParser();
+
+          var eventProperties = {
+            url: {
+              source: parsedUrl.attr("source"),
+              protocol: parsedUrl.attr("protocol"),
+              domain: parsedUrl.attr("host"),
+              port: parsedUrl.attr("port"),
+              path: parsedUrl.attr("path"),
+              anchor: parsedUrl.attr("anchor")
+            },
+            user_agent: {
+              browser: parser.getBrowser(),
+              engine: parser.getEngine(),
+              os: parser.getOS()
+            }
+          };
+
+          //Add information about the referrer of the same format as the current page
+          var referrer = document.referrer;
+          referrerObject = null;
+
+          if(referrer != undefined){
+            parsedReferrer = $.url(referrer);
+
+            referrerObject = {
+              source: parsedReferrer.attr("source"),
+              protocol: parsedReferrer.attr("protocol"),
+              domain: parsedReferrer.attr("host"),
+              port: parsedReferrer.attr("port"),
+              path: parsedReferrer.attr("path"),
+              anchor: parsedReferrer.attr("anchor")
+            }
+          }
+
+          eventProperties["referrer"] = referrerObject;
+          
+          Keen.addEvent("pageviews", eventProperties)
+
+    });
+    </script>
 
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
@@ -97,33 +149,29 @@
 
     <script type="text/javascript"> 
         
-        headerOptions = [
-            "Click that Button Now!",
-            "Hello There....",
-            "Everything the Light Touches",
-            "Change Your Life.",
-            "There's Always Money in the Banana Stand."
-        ]
-        var headerText = headerOptions[Math.floor(Math.random() * headerOptions.length)]
-        
-        document.getElementById("mainHeader").innerHTML = headerText;
-        
-        var engage = function () {
+      headerOptions = [
+        "Click that Button Now!",
+        "Hello There....",
+        "Everything the Light Touches",
+        "Change Your Life.",
+        "There's Always Money in the Banana Stand."
+      ]
+      
+      var headerText = headerOptions[Math.floor(Math.random() * headerOptions.length)]
 
-            document.getElementById("gifPortal").innerHTML = '<img src="img/doggylime.gif">';
-            
-            // <!-- [][][][][][][][][] Add Event Tracking Here! [][][][][][][][][][][] -->
-            
-        };  
+      document.getElementById("mainHeader").innerHTML = headerText;
+
+      var engage = function () {
         
-        
+        document.getElementById("gifPortal").innerHTML = '<img src="img/doggylime.gif">';
+
+      // <!-- [][][][][][][][][] Add Event Tracking Here! [][][][][][][][][][][] -->
+      // Keen.addEvent ... 
+
+      };  
+
     </script>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
+    
     
   </body>
 </html>

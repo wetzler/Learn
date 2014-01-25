@@ -1,5 +1,5 @@
-Exercise 3
-==========
+Exercise 3 - Query String Parameters
+====================================
 
 1. Write a tweet that links to Hackbright. Let's see whose tweet gets the most clicks!
 

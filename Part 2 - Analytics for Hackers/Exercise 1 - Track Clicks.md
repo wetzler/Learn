@@ -1,5 +1,5 @@
-Exercise 1
-==========
+Exercise 1 - Track Clicks
+=========================
 
 The owner of SampleSite site REALLY wants users to click the engage button so they can see her AWESOME gif.
 She wants to know how many people are clicking the engage button over time, and also if different headers make visitors more or less likely to click the button.

@@ -1,5 +1,5 @@
-Exercise 2
-==========
+Exercise 2 - Graph Clicks
+=========================
 
 We'll build off the changes we made in exercise 1. In this exercise, we'll work on a stats page [(SampleSite/stats.html)](./SampleSite). to display some of the data on the user engagement with engage button.
 

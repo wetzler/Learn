@@ -8,8 +8,6 @@
     <link href="css/jumbotron.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet"> 
 
-    <!-- [] [] [] [] [] [] [] [] [] [] [] [] -->
-    <!-- Exercise 2 Solution [part 1 of 2] -->
     
     <script type="text/javascript">
       // Include the Keen IO library for Event Tracking
@@ -20,15 +18,60 @@
       //   writeKey: "<your write key>", // required for sending events
       //   readKey: "<your read key>" // required for querying/charting events
       // });
-    
       
     </script>
     
-    <!-- End of Exercise 2 Solution [part 1 of 2] -->
-    <!-- [] [] [] [] [] [] [] [] [] [] [] [] -->    
+   
     
   </head>
   <body>
+      <script>
+          $(document).ready(function(){
+
+              //Add a pageview event in Keen IO
+              var fullUrl = window.location.href;
+              var parsedUrl = $.url(fullUrl);
+              var parser = new UAParser();
+
+              var eventProperties = {
+                  url: {
+                      source: parsedUrl.attr("source"),
+                      protocol: parsedUrl.attr("protocol"),
+                      domain: parsedUrl.attr("host"),
+                      port: parsedUrl.attr("port"),
+                      path: parsedUrl.attr("path"),
+                      anchor: parsedUrl.attr("anchor")
+                  },
+                  user_agent: {
+                      browser: parser.getBrowser(),
+                      engine: parser.getEngine(),
+                      os: parser.getOS()
+                  }
+              };
+
+              //Add information about the referrer of the same format as the current page
+              var referrer = document.referrer;
+              referrerObject = null;
+
+              if(referrer != undefined){
+                  parsedReferrer = $.url(referrer);
+
+                  referrerObject = {
+                      source: parsedReferrer.attr("source"),
+                      protocol: parsedReferrer.attr("protocol"),
+                      domain: parsedReferrer.attr("host"),
+                      port: parsedReferrer.attr("port"),
+                      path: parsedReferrer.attr("path"),
+                      anchor: parsedReferrer.attr("anchor")
+                  }
+              }
+
+              eventProperties["referrer"] = referrerObject;
+
+              Keen.addEvent("pageviews", eventProperties)
+
+          });
+      </script>  
 
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
@@ -119,7 +162,7 @@
             document.getElementById("gifPortal").innerHTML = '<img src="img/doggylime.gif">';
             
             // // [] [] [] [] [] [] [] [] [] [] [] [] 
-            // // Exercise 2 Solution [part 2 of 2]
+            // // Exercise 2 Solution 
                         
             // create an event as a JS object
             var engageClick = {
@@ -129,18 +172,12 @@
             
             Keen.addEvent("engagements", engageClick);
             
-            // // End of Exercise 2 Solution [part 2 of 2]
+            // // End of Exercise 2 Solution
             // // [] [] [] [] [] [] [] [] [] [] [] [] 
         };  
         
         
     </script>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    
   </body>
 </html>
