@@ -5,12 +5,12 @@ Exercise 3 - Query String Parameters
 
 2. The links should include at least two query string parameters:
        - twitter handle sending the tweet
-       - text of the tweet
+       - short description of the tweet
 
     example: 
     
     ```
-    https://hackbrightacademy.com/?source=@doge&tweet_text=VERY%20PROGRAMMING.%20WOW.%20SUCH%20FEMALES.%20SO%20AMAZE.%20MUCH%20INTELLIGENCE.
+    http://hackbrightacademy.com/?source=@doge&tweet_text=very_programming_such_intelligence
     ```
        
 3. Tweet the link and click it!

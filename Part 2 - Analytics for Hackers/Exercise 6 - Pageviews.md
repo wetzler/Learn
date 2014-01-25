@@ -18,57 +18,57 @@ Now you'll implement custom pageview tracking on SampleSite.
 
 2. Add the following simplified pageview tracking code to Sample Site's pages. Copy & paste this code into the body section of index.html & stats.html.
 
-Pageview tracking code::
+  Pageview tracking code::
 
-```javascript
-  <script>
-    $(document).ready(function(){
+  ```javascript
+    <script>
+      $(document).ready(function(){
 
-      //Add a pageview event in Keen IO
-      var fullUrl = window.location.href;
-      var parsedUrl = $.url(fullUrl);
-      var parser = new UAParser();
+        //Add a pageview event in Keen IO
+        var fullUrl = window.location.href;
+        var parsedUrl = $.url(fullUrl);
+        var parser = new UAParser();
 
-      var eventProperties = {
-        url: {
-          source: parsedUrl.attr("source"),
-          protocol: parsedUrl.attr("protocol"),
-          domain: parsedUrl.attr("host"),
-          port: parsedUrl.attr("port"),
-          path: parsedUrl.attr("path"),
-          anchor: parsedUrl.attr("anchor")
-        },
-        user_agent: {
-          browser: parser.getBrowser(),
-          engine: parser.getEngine(),
-          os: parser.getOS()
+        var eventProperties = {
+          url: {
+            source: parsedUrl.attr("source"),
+            protocol: parsedUrl.attr("protocol"),
+            domain: parsedUrl.attr("host"),
+            port: parsedUrl.attr("port"),
+            path: parsedUrl.attr("path"),
+            anchor: parsedUrl.attr("anchor")
+          },
+          user_agent: {
+            browser: parser.getBrowser(),
+            engine: parser.getEngine(),
+            os: parser.getOS()
+          }
+        };
+
+        //Add information about the referrer of the same format as the current page
+        var referrer = document.referrer;
+        referrerObject = null;
+
+        if(referrer != undefined){
+          parsedReferrer = $.url(referrer);
+
+          referrerObject = {
+            source: parsedReferrer.attr("source"),
+            protocol: parsedReferrer.attr("protocol"),
+            domain: parsedReferrer.attr("host"),
+            port: parsedReferrer.attr("port"),
+            path: parsedReferrer.attr("path"),
+            anchor: parsedReferrer.attr("anchor")
+          }
         }
-      };
 
-      //Add information about the referrer of the same format as the current page
-      var referrer = document.referrer;
-      referrerObject = null;
-
-      if(referrer != undefined){
-        parsedReferrer = $.url(referrer);
-
-        referrerObject = {
-          source: parsedReferrer.attr("source"),
-          protocol: parsedReferrer.attr("protocol"),
-          domain: parsedReferrer.attr("host"),
-          port: parsedReferrer.attr("port"),
-          path: parsedReferrer.attr("path"),
-          anchor: parsedReferrer.attr("anchor")
-        }
-      }
-
-      eventProperties["referrer"] = referrerObject;
+        eventProperties["referrer"] = referrerObject;
       
-      Keen.addEvent("pageviews", eventProperties)
+        Keen.addEvent("pageviews", eventProperties)
 
-});
-</script>
-````
+  });
+  </script>
+  ````
 
 3. Launch index.html in your browser and refresh it a few times. 
 
