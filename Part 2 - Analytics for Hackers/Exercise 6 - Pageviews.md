@@ -16,7 +16,7 @@ Now you'll implement custom pageview tracking on SampleSite.
 
 1. Read the docs on [Keen IO Pageview tracking](https://keen.io/docs/recipes/pageviews/). We'll be doing a simplified version of pageview tracking that doesn't include session cookies.
 
-2. Add the following simplified pageview tracking code to Sample Site's index.html. Copy & paste this code into the body section of index.html & stats.html.
+2. Add the following simplified pageview tracking code to Sample Site's pages. Copy & paste this code into the body section of index.html & stats.html.
 
 Pageview tracking code::
 
@@ -70,19 +70,17 @@ Pageview tracking code::
 </script>
 ````
 
-Note: Some of the code in the sample is already present on our pages and doesn't need to be copied (the Keen library code "var Keen=Keen..." & configurations for Keys).
-
-3. Add pageview tracking code to the stats.html too.
-
-4. Launch index.html in your browser and refresh it a few times. 
+3. Launch index.html in your browser and refresh it a few times. 
 
 5. Log into Keen IO and confirm that pageviews are being tracked. 
 
-6. Open index.html in another browser (Safari, Chrome, Firefox, etc). Now make a piechart that shows the breakdown of visitors by Browser Name.
+6. Open index.html in another browser (Safari, Chrome, Firefox, etc).
 
-7. In the index.html page in your browser, click the link to go to the stats page.
+7. Now that you've visited the page with multiple browsers, make a piechart that shows the breakdown of visitors by Browser Name.
 
-8. Now run some analysis on referrers. What is the top referrer for the stats page?
+8. In your browser, click the link to go to the stats page.
+
+9. Now run some analysis on referrers. What is the top referrer for the stats page?
 
 
 

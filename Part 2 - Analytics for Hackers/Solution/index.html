@@ -25,159 +25,159 @@
     
   </head>
   <body>
-      <script>
-          $(document).ready(function(){
+    <script>
+      $(document).ready(function(){
 
-              //Add a pageview event in Keen IO
-              var fullUrl = window.location.href;
-              var parsedUrl = $.url(fullUrl);
-              var parser = new UAParser();
+        //Add a pageview event in Keen IO
+        var fullUrl = window.location.href;
+        var parsedUrl = $.url(fullUrl);
+        var parser = new UAParser();
 
-              var eventProperties = {
-                  url: {
-                      source: parsedUrl.attr("source"),
-                      protocol: parsedUrl.attr("protocol"),
-                      domain: parsedUrl.attr("host"),
-                      port: parsedUrl.attr("port"),
-                      path: parsedUrl.attr("path"),
-                      anchor: parsedUrl.attr("anchor")
-                  },
-                  user_agent: {
-                      browser: parser.getBrowser(),
-                      engine: parser.getEngine(),
-                      os: parser.getOS()
-                  }
-              };
+        var eventProperties = {
+          url: {
+            source: parsedUrl.attr("source"),
+            protocol: parsedUrl.attr("protocol"),
+            domain: parsedUrl.attr("host"),
+            port: parsedUrl.attr("port"),
+            path: parsedUrl.attr("path"),
+            anchor: parsedUrl.attr("anchor")
+          },
+          user_agent: {
+            browser: parser.getBrowser(),
+            engine: parser.getEngine(),
+            os: parser.getOS()
+          }
+        };
 
-              //Add information about the referrer of the same format as the current page
-              var referrer = document.referrer;
-              referrerObject = null;
+        //Add information about the referrer of the same format as the current page
+        var referrer = document.referrer;
+        referrerObject = null;
 
-              if(referrer != undefined){
-                  parsedReferrer = $.url(referrer);
+        if(referrer != undefined){
+          parsedReferrer = $.url(referrer);
 
-                  referrerObject = {
-                      source: parsedReferrer.attr("source"),
-                      protocol: parsedReferrer.attr("protocol"),
-                      domain: parsedReferrer.attr("host"),
-                      port: parsedReferrer.attr("port"),
-                      path: parsedReferrer.attr("path"),
-                      anchor: parsedReferrer.attr("anchor")
-                  }
-              }
+          referrerObject = {
+            source: parsedReferrer.attr("source"),
+            protocol: parsedReferrer.attr("protocol"),
+            domain: parsedReferrer.attr("host"),
+            port: parsedReferrer.attr("port"),
+            path: parsedReferrer.attr("path"),
+            anchor: parsedReferrer.attr("anchor")
+          }
+        }
 
-              eventProperties["referrer"] = referrerObject;
+        eventProperties["referrer"] = referrerObject;
 
-              Keen.addEvent("pageviews", eventProperties)
+        Keen.addEvent("pageviews", eventProperties)
 
-          });
-      </script>  
+  });
+  </script>  
 
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">What a nice website!</a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form>
-        </div><!--/.navbar-collapse -->
-      </div>
-    </div>
-
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1 id="mainHeader">Hello, world!</h1>
-        <p>You know you want to click that button.</p>
-        <p><a class="btn btn-primary btn-lg" id="mainButton" role="button" onclick="engage()">Engage &raquo;</a></p>
-      </div>
-    </div>
-
-    <div class ="displayPortal">
-      <div class ="container">
-        <table>
-          <tr class="row">
-            <td id="gifPortal"></td>
-            <td class="h1 gifText" id="gifText"></td>
-          </tr>
-        </table>        
-      </div>
-    </div>
-
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <h2>Doorknob</h2>
-          <p>Words are important for understanding human life. Without words, we wouldn't be able to have conversations. Or spelling bees.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-          <h2>Calcium</h2>
-          <p>Look around you. Look <em>around</em> you. Just look around you. Have you worked out what we're looking for?</p>
-          <p><a class="btn btn-default" href="https://www.youtube.com/watch?v=n2k9JwGpm1w" role="button">View details &raquo;</a></p>
-       </div>
-        <div class="col-md-4">
-          <h2>Dashboard</h2>
-          <p>Let's see how we're doing.</p>
-          <p><a class="btn btn-default" id="bigButton" href="stats.html" role="button">View details &raquo;</a></p>
-        </div>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">What a nice website!</a>
       </div>
+      <div class="navbar-collapse collapse">
+        <form class="navbar-form navbar-right">
+          <div class="form-group">
+            <input type="text" placeholder="Email" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="password" placeholder="Password" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-success">Sign in</button>
+        </form>
+      </div><!--/.navbar-collapse -->
+    </div>
+  </div>
 
-      <hr>
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <div class="container">
+      <h1 id="mainHeader">Hello, world!</h1>
+      <p>You know you want to click that button.</p>
+      <p><a class="btn btn-primary btn-lg" id="mainButton" role="button" onclick="engage()">Engage &raquo;</a></p>
+    </div>
+  </div>
 
-      <footer>
-        <p>&copy; Company 2013</p>
-      </footer>
-    </div> <!-- /container -->
+  <div class ="displayPortal">
+    <div class ="container">
+      <table>
+        <tr class="row">
+          <td id="gifPortal"></td>
+          <td class="h1 gifText" id="gifText"></td>
+        </tr>
+      </table>        
+    </div>
+  </div>
 
-    <script type="text/javascript"> 
-        
-        headerOptions = [
-            "Click that Button Now!",
-            "Hello There....",
-            "Everything the Light Touches",
-            "Change Your Life.",
-            "There's Always Money in the Banana Stand."
-        ]
-        var headerText = headerOptions[Math.floor(Math.random() * headerOptions.length)]
-        
-        document.getElementById("mainHeader").innerHTML = headerText;
-        
-        var engage = function () {
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Doorknob</h2>
+        <p>Words are important for understanding human life. Without words, we wouldn't be able to have conversations. Or spelling bees.</p>
+        <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+      </div>
+      <div class="col-md-4">
+        <h2>Calcium</h2>
+        <p>Look around you. Look <em>around</em> you. Just look around you. Have you worked out what we're looking for?</p>
+        <p><a class="btn btn-default" href="https://www.youtube.com/watch?v=n2k9JwGpm1w" role="button">View details &raquo;</a></p>
+     </div>
+      <div class="col-md-4">
+        <h2>Dashboard</h2>
+        <p>Let's see how we're doing.</p>
+        <p><a class="btn btn-default" id="bigButton" href="stats.html" role="button">View details &raquo;</a></p>
+      </div>
+    </div>
 
-            document.getElementById("gifPortal").innerHTML = '<img src="img/doggylime.gif">';
-            
-            // // [] [] [] [] [] [] [] [] [] [] [] [] 
-            // // Exercise 2 Solution 
-                        
-            // create an event as a JS object
-            var engageClick = {
-                h1: headerText,
-                buttonText: document.getElementById("bigButton").innerHTML  // Optional! For fun! Adds the button text.
-            };
-            
-            Keen.addEvent("engagements", engageClick);
-            
-            // // End of Exercise 2 Solution
-            // // [] [] [] [] [] [] [] [] [] [] [] [] 
-        };  
-        
-        
-    </script>
+    <hr>
+
+    <footer>
+      <p>&copy; Company 2013</p>
+    </footer>
+  </div> <!-- /container -->
+
+  <script type="text/javascript"> 
+      
+    headerOptions = [
+      "Click that Button Now!",
+      "Hello There....",
+      "Everything the Light Touches",
+      "Change Your Life.",
+      "There's Always Money in the Banana Stand."
+    ]
+    var headerText = headerOptions[Math.floor(Math.random() * headerOptions.length)]
+    
+    document.getElementById("mainHeader").innerHTML = headerText;
+    
+    var engage = function () {
+
+      document.getElementById("gifPortal").innerHTML = '<img src="img/doggylime.gif">';
+      
+      // // [] [] [] [] [] [] [] [] [] [] [] [] 
+      // // Exercise 2 Solution 
+                  
+      // create an event as a JS object
+      var engageClick = {
+        h1: headerText,
+        buttonText: document.getElementById("bigButton").innerHTML  // Optional! For fun! Adds the button text.
+      };
+      
+      Keen.addEvent("engagements", engageClick);
+      
+      // // End of Exercise 2 Solution
+      // // [] [] [] [] [] [] [] [] [] [] [] [] 
+    };  
+    
+      
+  </script>
 
   </body>
 </html>
