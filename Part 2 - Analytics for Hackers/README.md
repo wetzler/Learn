@@ -20,6 +20,7 @@ Exercises:
 - [Exercise 3 - Query String Params](Exercise 3 - Query String Params.md)
 - [Exercise 4 - Beacons](Exercise 4 - Beacons.md)
 - [Exercise 5 - Redirects](Exercise 5 - Redirects.md)
+- [Exercise 6 - Pageviews](Exercise 6 - Pageviews.md)
 
 
 
