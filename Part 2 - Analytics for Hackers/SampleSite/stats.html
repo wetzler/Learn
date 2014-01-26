@@ -14,9 +14,9 @@
 
       // Configure the Keen object with your Project ID and access keys.
       Keen.configure({
-        projectId: "527f4a5705cd666b59000003",
+        projectId: "your_project_key",
         writeKey: "your_write_key", // required for sending events
-        readKey: "01729e494648af5381f18c674b380b7d6946796bb2934c375825bd5a83511cb8c8f6f69db1e11032c099bd5d5a99c0b98d6ae505857785a71fc853ce6cefad0148ea05e07c02834deac5bc35c00c96e20ea1e3a8e91bca7ad3619b2a92c185f979667201a2829a2082d5f0d63b347b57"    // required for doing analysis
+        readKey: "your_read_key"    // required for doing analysis
       });
       
     </script>
@@ -90,12 +90,12 @@
         // The first widget here is almost finished. Just insert your collection name and it should work.
         // This is a counter for the total number of button clicks (all time running total).
         
-        var metric1 = new Keen.Metric("wow_someone_clicked", {
+        var metric1 = new Keen.Metric("<your collection name>", {
             analysisType: "count"  // Query parameters go in here. In this example we just have one (analysisType).
         });
 
         metric1.draw(document.getElementById("chart1"), {  // 
-            label: "YESSSSSSS!"
+            label: "I need a label!"
         });
         
         
@@ -103,26 +103,13 @@
         // Find the total number of engagements sorted by header
         // Draw it as a PieChart using the Keen IO Workbench, then copy & paste the code in here
 
-        var metric = new Keen.Metric("wow_someone_clicked", {
-          analysisType: "count",
-          groupBy: "headertext"
-        });
-        metric.draw(document.getElementById("chart2"));
         
         // [] [] Item 3 [] [] [] [] [] [] [] [] [] [] [] [] 
         // Find the total number of engagements over time
         // Reference Keen IO Javascript Reference Docs to find out how to do this
         
        
-          var series = new Keen.Series("wow_someone_clicked", {
-            analysisType: "count",
-            timeframe: "last_20_minutes",
-            interval: "minutely",
-            groupBy: "headertext"
-          });
-          series.draw(document.getElementById("chart3"));
 
-          
       });
       
     </script>
