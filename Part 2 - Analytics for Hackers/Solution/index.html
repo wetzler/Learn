@@ -11,173 +11,122 @@
     
     <script type="text/javascript">
       // Include the Keen IO library for Event Tracking
-      var Keen=Keen||{configure:function(e){this._cf=e},addEvent:function(e,t,n,i){this._eq=this._eq||[],this._eq.push([e,t,n,i])},setGlobalProperties:function(e){this._gp=e},onChartsReady:function(e){this._ocrq=this._ocrq||[],this._ocrq.push(e)}};(function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src=("https:"==document.location.protocol?"https://":"http://")+"dc8na2hxrj29i.cloudfront.net/code/keen-2.1.0-min.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
+      !function(a,b){if(void 0===b[a]){b["_"+a]={},b[a]=function(c){b["_"+a].clients=b["_"+a].clients||{},b["_"+a].clients[c.projectId]=this,this._config=c},b[a].ready=function(c){b["_"+a].ready=b["_"+a].ready||[],b["_"+a].ready.push(c)};for(var c=["addEvent","setGlobalProperties","trackExternalLink","on"],d=0;d<c.length;d++){var e=c[d],f=function(a){return function(){return this["_"+a]=this["_"+a]||[],this["_"+a].push(arguments),this}};b[a].prototype[e]=f(e)}var g=document.createElement("script");g.type="text/javascript",g.async=!0,g.src="https://d26b395fwzu5fz.cloudfront.net/3.0.4/keen.min.js";var h=document.getElementsByTagName("script")[0];h.parentNode.insertBefore(g,h)}}("Keen",this);
 
-      // Keen.configure({
-      //   projectId: "<your project ID>",
-      //   writeKey: "<your write key>", // required for sending events
-      //   readKey: "<your read key>" // required for querying/charting events
-      // });
+      var keenclient = new Keen({
+        projectId: "4fdf5ae25f546f1b6a000002",
+        writeKey: "39f656d9a52c96777ddd86aa7654117250354240433062cabdab45987085f76904c5963a87e615686b946b107591556bc952f26007a5332aa33eb8d3c1ce775be82f975d9b99c47386101ed6fa3d2e76611624f58056b8420808aa1c487920e84d2548a205892b775482e62c854677df",
+        readKey: "anything" // not used; not needed for data collection 
+      });
       
     </script>
     
-   
-    
   </head>
   <body>
-    <script>
-      $(document).ready(function(){
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">What a nice website!</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-success">Sign in</button>
+          </form>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
 
-        //Add a pageview event in Keen IO
-        var fullUrl = window.location.href;
-        var parsedUrl = $.url(fullUrl);
-        var parser = new UAParser();
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1 id="mainHeader">Hello, world!</h1>
+        <p>You know you want to click that button.</p>
+        <p><a class="btn btn-primary btn-lg" id="mainButton" role="button" onclick="engage()">Engage &raquo;</a></p>
+      </div>
+    </div>
 
-        var eventProperties = {
-          url: {
-            source: parsedUrl.attr("source"),
-            protocol: parsedUrl.attr("protocol"),
-            domain: parsedUrl.attr("host"),
-            port: parsedUrl.attr("port"),
-            path: parsedUrl.attr("path"),
-            anchor: parsedUrl.attr("anchor")
-          },
-          user_agent: {
-            browser: parser.getBrowser(),
-            engine: parser.getEngine(),
-            os: parser.getOS()
-          }
+    <div class ="displayPortal">
+      <div class ="container">
+        <table>
+          <tr class="row">
+            <td id="gifPortal"></td>
+            <td class="h1 gifText" id="gifText"></td>
+          </tr>
+        </table>        
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Doorknob</h2>
+          <p>Words are important for understanding human life. Without words, we wouldn't be able to have conversations. Or spelling bees.</p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Calcium</h2>
+          <p>Look around you. Look <em>around</em> you. Just look around you. Have you worked out what we're looking for?</p>
+          <p><a class="btn btn-default" href="https://www.youtube.com/watch?v=n2k9JwGpm1w" role="button">View details &raquo;</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Dashboard</h2>
+          <p>Let's see how we're doing.</p>
+          <p><a class="btn btn-default" id="bigButton" href="stats.html" role="button">View details &raquo;</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; Company 2013</p>
+      </footer>
+    </div> <!-- /container -->
+
+    <script type="text/javascript"> 
+      
+      headerOptions = [
+        "Click that Button Now!",
+        "Hello There....",
+        "Everything the Light Touches",
+        "Change Your Life.",
+        "There's Always Money in the Banana Stand."
+      ]
+      var headerText = headerOptions[Math.floor(Math.random() * headerOptions.length)]
+    
+      document.getElementById("mainHeader").innerHTML = headerText;
+    
+      var engage = function () {
+
+        document.getElementById("gifPortal").innerHTML = '<img src="img/doggylime.gif">';
+      
+        // // [] [] [] [] [] [] [] [] [] [] [] [] 
+        // // Exercise 2 Solution 
+                  
+        var engageClick = {
+          h1: headerText,
+          buttonText: document.getElementById("bigButton").innerHTML  // Optional! For fun! Adds the button text.
         };
 
-        //Add information about the referrer of the same format as the current page
-        var referrer = document.referrer;
-        referrerObject = null;
-
-        if(referrer != undefined){
-          parsedReferrer = $.url(referrer);
-
-          referrerObject = {
-            source: parsedReferrer.attr("source"),
-            protocol: parsedReferrer.attr("protocol"),
-            domain: parsedReferrer.attr("host"),
-            port: parsedReferrer.attr("port"),
-            path: parsedReferrer.attr("path"),
-            anchor: parsedReferrer.attr("anchor")
-          }
-        }
-
-        eventProperties["referrer"] = referrerObject;
-
-        Keen.addEvent("pageviews", eventProperties)
-
-  });
-  </script>  
-
-  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">What a nice website!</a>
-      </div>
-      <div class="navbar-collapse collapse">
-        <form class="navbar-form navbar-right">
-          <div class="form-group">
-            <input type="text" placeholder="Email" class="form-control">
-          </div>
-          <div class="form-group">
-            <input type="password" placeholder="Password" class="form-control">
-          </div>
-          <button type="submit" class="btn btn-success">Sign in</button>
-        </form>
-      </div><!--/.navbar-collapse -->
-    </div>
-  </div>
-
-  <!-- Main jumbotron for a primary marketing message or call to action -->
-  <div class="jumbotron">
-    <div class="container">
-      <h1 id="mainHeader">Hello, world!</h1>
-      <p>You know you want to click that button.</p>
-      <p><a class="btn btn-primary btn-lg" id="mainButton" role="button" onclick="engage()">Engage &raquo;</a></p>
-    </div>
-  </div>
-
-  <div class ="displayPortal">
-    <div class ="container">
-      <table>
-        <tr class="row">
-          <td id="gifPortal"></td>
-          <td class="h1 gifText" id="gifText"></td>
-        </tr>
-      </table>        
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <h2>Doorknob</h2>
-        <p>Words are important for understanding human life. Without words, we wouldn't be able to have conversations. Or spelling bees.</p>
-        <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-      </div>
-      <div class="col-md-4">
-        <h2>Calcium</h2>
-        <p>Look around you. Look <em>around</em> you. Just look around you. Have you worked out what we're looking for?</p>
-        <p><a class="btn btn-default" href="https://www.youtube.com/watch?v=n2k9JwGpm1w" role="button">View details &raquo;</a></p>
-     </div>
-      <div class="col-md-4">
-        <h2>Dashboard</h2>
-        <p>Let's see how we're doing.</p>
-        <p><a class="btn btn-default" id="bigButton" href="stats.html" role="button">View details &raquo;</a></p>
-      </div>
-    </div>
-
-    <hr>
-
-    <footer>
-      <p>&copy; Company 2013</p>
-    </footer>
-  </div> <!-- /container -->
-
-  <script type="text/javascript"> 
+        keenclient.addEvent("engagements", engageClick);
       
-    headerOptions = [
-      "Click that Button Now!",
-      "Hello There....",
-      "Everything the Light Touches",
-      "Change Your Life.",
-      "There's Always Money in the Banana Stand."
-    ]
-    var headerText = headerOptions[Math.floor(Math.random() * headerOptions.length)]
-    
-    document.getElementById("mainHeader").innerHTML = headerText;
-    
-    var engage = function () {
-
-      document.getElementById("gifPortal").innerHTML = '<img src="img/doggylime.gif">';
-      
-      // // [] [] [] [] [] [] [] [] [] [] [] [] 
-      // // Exercise 2 Solution 
-                  
-      // create an event as a JS object
-      var engageClick = {
-        h1: headerText,
-        buttonText: document.getElementById("bigButton").innerHTML  // Optional! For fun! Adds the button text.
-      };
-      
-      Keen.addEvent("engagements", engageClick);
-      
-      // // End of Exercise 2 Solution
-      // // [] [] [] [] [] [] [] [] [] [] [] [] 
-    };  
+        // // End of Exercise 2 Solution
+        // // [] [] [] [] [] [] [] [] [] [] [] [] 
+      };  
     
       
-  </script>
+    </script>
 
   </body>
 </html>
