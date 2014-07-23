@@ -14,9 +14,9 @@ Steps:
   
 3. We'll use Keen IO as an event data store. Create a free [Keen IO](https://www.keen.io) account so you can send your event data there.
 
-4. The Keen IO [Javascript](https://keen.io/docs/clients/javascript/usage-guide/) snippet should already be pasted into the index.html script section. Specify your specific Keen IO project ID and write key in the configuration.
+4. The Keen IO Javascript snippet should already be pasted into the index.html script section. Specify your specific Keen IO project ID and write key in the configuration.
 
-5. As a part of the onclick function, call the Keen IO add event method to track the button click. Reference the [Keen IO Javascript Usage Guide](https://keen.io/docs/clients/javascript/usage-guide/).
+5. As a part of the onclick function, call the Keen IO add event method to track the button click. Reference the [Keen IO Javascript Usage Guide](https://github.com/keenlabs/keen-js).
 
 6. Save the file. Open the file in your local browser and click the engage button locally a buncha times.
 

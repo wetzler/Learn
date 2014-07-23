@@ -10,20 +10,12 @@
 
     <script type="text/javascript">
       // Include the Keen IO library for Analysis
-      var Keen=Keen||{configure:function(e){this._cf=e},addEvent:function(e,t,n,i){this._eq=this._eq||[],this._eq.push([e,t,n,i])},setGlobalProperties:function(e){this._gp=e},onChartsReady:function(e){this._ocrq=this._ocrq||[],this._ocrq.push(e)}};(function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src=("https:"==document.location.protocol?"https://":"http://")+"dc8na2hxrj29i.cloudfront.net/code/keen-2.1.0-min.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();
+      !function(a,b){if(void 0===b[a]){b["_"+a]={},b[a]=function(c){b["_"+a].clients=b["_"+a].clients||{},b["_"+a].clients[c.projectId]=this,this._config=c},b[a].ready=function(c){b["_"+a].ready=b["_"+a].ready||[],b["_"+a].ready.push(c)};for(var c=["addEvent","setGlobalProperties","trackExternalLink","on"],d=0;d<c.length;d++){var e=c[d],f=function(a){return function(){return this["_"+a]=this["_"+a]||[],this["_"+a].push(arguments),this}};b[a].prototype[e]=f(e)}var g=document.createElement("script");g.type="text/javascript",g.async=!0,g.src="https://d26b395fwzu5fz.cloudfront.net/3.0.4/keen.min.js";var h=document.getElementsByTagName("script")[0];h.parentNode.insertBefore(g,h)}}("Keen",this);
 
-      // // Configure the Keen object with your Project ID and (optional) access keys.
-      // Keen.configure({
-      //   projectId: "<your project ID>",
-      //   writeKey: "<your write key>", // required for sending events
-      //   readKey: "<your read key>" // required for querying/charting events
-      // });
-      
       // Configure the Keen object with your Project ID and (optional) access keys.
-      Keen.configure({
-          projectId: "527f4a5705cd666b59000003",
-          writeKey: "01729e494648af5381f18c674b380b7d6946796bb2934c375825bd5a83511cb8c8f6f69db1e11032c099bd5d5a99c0b98d6ae505857785a71fc853ce6cefad0148ea05e07c02834deac5bc35c00c96e20ea1e3a8e91bca7ad3619b2a92c185f979667201a2829a2082d5f0d63b347b57", // required for sending events
-          readKey: "01729e494648af5381f18c674b380b7d6946796bb2934c375825bd5a83511cb8c8f6f69db1e11032c099bd5d5a99c0b98d6ae505857785a71fc853ce6cefad0148ea05e07c02834deac5bc35c00c96e20ea1e3a8e91bca7ad3619b2a92c185f979667201a2829a2082d5f0d63b347b57"    // required for doing analysis
+      var keenclient = new Keen({
+        projectId: "<enter your project ID!>",   // <=== enter info here!
+        readKey: "<enter your read key!>"
       });
       
     </script>
@@ -40,7 +32,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">What a nice website!</a>
+          <a class="navbar-brand" href="index.html">What nice stats u have!</a>
         </div>
         <div class="navbar-collapse collapse">
           <form class="navbar-form navbar-right">
@@ -72,6 +64,8 @@
         <div class="col-md-6">
           <div id="chart1"></div> <!-- LOOK HERE! It's a placeholder for a new chart. -->
         </div>
+      </div>  
+      <div class="row">
         <div class="col-md-6">
           <div id="chart2"></div> <!-- LOOK HERE! It's a placeholder for a new chart. -->
         </div>
@@ -86,45 +80,53 @@
     <script type="text/javascript" charset="utf-8">
       
 
-      Keen.onChartsReady(function() {   // The onChartsReady function draws charts as soon as the page is loaded.
-            
-            // [] [] Item 1 [] [] [] [] [] [] [] [] [] [] [] [] 
-            // The first widget here is almost finished. Just insert your collection name and it should work.
-            // This is a counter for the total number of button clicks (all time running total).
+    Keen.ready(function(){   
+               
+        // [] [] Item 1 [] [] [] [] [] [] [] [] [] [] [] [] 
+        // The first widget here is almost finished. Just insert your collection name and it should work.
+        // This is a counter for the total number of button clicks (all time running total).
 
-            var metric1 = new Keen.Metric("engagements", {
-                analysisType: "count"  // Query parameters go in here. In this example we just have one (analysisType).
-            });
+        var metric1 = new Keen.Query("count", {
+            eventCollection: "engagements" // Query parameters go in here. In this example we just have one (analysisType).
+        });
 
-            metric1.draw(document.getElementById("chart1"), {  // 
-                label: "Total Engagements All Time"
-            });
+        keenclient.draw(metric1, document.getElementById("chart1"), {
+            chartType: "metric",
+            title: "Total Engagements All Time",
+            colors: ["#49c5b1"]
+        });
 
+        // [] [] Item 2 [] [] [] [] [] [] [] [] [] [] [] [] 
+        // Find the total number of engagements sorted by header
+        // Draw it as a PieChart
+        // Reference Keen IO Javascript Reference Docs to find out how to do this
+    
+        var metric2 = new Keen.Query("count", {
+            eventCollection: "engagements",
+            groupBy: "h1" // Query parameters go in here. In this example we just have one (groupBy).
+        });
+    
+        keenclient.draw(metric2, document.getElementById("chart2"), {
+            chartType: "piechart",
+            title: "Engagements by H1 Header Text",
+            chartOptions: {
+              isStacked: true,
+              legend: { position: "none" }
+            }
+        });
 
-            // [] [] Item 2 [] [] [] [] [] [] [] [] [] [] [] [] 
-            // Find the total number of engagements sorted by header
-            // Draw it as a PieChart
-            // Reference Keen IO Javascript Reference Docs to find out how to do this
+        // [] [] Item 3 [] [] [] [] [] [] [] [] [] [] [] [] 
+        // Find the total number of engagements over time
+        // Reference Keen IO Javascript Reference Docs to find out how to do this
 
-            var metric2 = new Keen.Metric("engagements", {
-                analysisType: "count",
-                groupBy: "h1Text"
-            });
-            metric2.draw(document.getElementById("chart2"));
+        var metric3 = new Keen.Query("count", {
+            eventCollection: "engagements",
+            timeframe: "last_30_minutes",
+            interval: "minutely" // Query parameters go in here. In this example we just have one (groupBy).
+        });
+    
+        keenclient.draw(metric3, document.getElementById("chart3"))
 
-
-            // [] [] Item 3 [] [] [] [] [] [] [] [] [] [] [] [] 
-            // Find the total number of engagements over time
-            // Reference Keen IO Javascript Reference Docs to find out how to do this
-
-           var series = new Keen.Series("engagements", {
-               analysisType: "count",
-               timeframe: "last_30_minutes",
-               interval: "minutely"
-          });
-          series.draw(document.getElementById("chart3"));
-
-          
       });
       
     </script>
