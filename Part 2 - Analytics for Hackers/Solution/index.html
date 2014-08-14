@@ -13,7 +13,7 @@
       // Include the Keen IO library for Event Tracking
       !function(a,b){if(void 0===b[a]){b["_"+a]={},b[a]=function(c){b["_"+a].clients=b["_"+a].clients||{},b["_"+a].clients[c.projectId]=this,this._config=c},b[a].ready=function(c){b["_"+a].ready=b["_"+a].ready||[],b["_"+a].ready.push(c)};for(var c=["addEvent","setGlobalProperties","trackExternalLink","on"],d=0;d<c.length;d++){var e=c[d],f=function(a){return function(){return this["_"+a]=this["_"+a]||[],this["_"+a].push(arguments),this}};b[a].prototype[e]=f(e)}var g=document.createElement("script");g.type="text/javascript",g.async=!0,g.src="https://d26b395fwzu5fz.cloudfront.net/3.0.4/keen.min.js";var h=document.getElementsByTagName("script")[0];h.parentNode.insertBefore(g,h)}}("Keen",this);
 
-      var keenclient = new Keen({
+      var client = new Keen({
         projectId: "4fdf5ae25f546f1b6a000002",
         writeKey: "39f656d9a52c96777ddd86aa7654117250354240433062cabdab45987085f76904c5963a87e615686b946b107591556bc952f26007a5332aa33eb8d3c1ce775be82f975d9b99c47386101ed6fa3d2e76611624f58056b8420808aa1c487920e84d2548a205892b775482e62c854677df",
         readKey: "anything" // not used; not needed for data collection 
@@ -119,7 +119,7 @@
           buttonText: document.getElementById("bigButton").innerHTML  // Optional! For fun! Adds the button text.
         };
 
-        keenclient.addEvent("engagements", engageClick);
+        client.addEvent("engagements", engageClick);
       
         // // End of Exercise 2 Solution
         // // [] [] [] [] [] [] [] [] [] [] [] [] 

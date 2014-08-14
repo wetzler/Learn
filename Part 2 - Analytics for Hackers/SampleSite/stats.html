@@ -13,7 +13,7 @@
       !function(a,b){if(void 0===b[a]){b["_"+a]={},b[a]=function(c){b["_"+a].clients=b["_"+a].clients||{},b["_"+a].clients[c.projectId]=this,this._config=c},b[a].ready=function(c){b["_"+a].ready=b["_"+a].ready||[],b["_"+a].ready.push(c)};for(var c=["addEvent","setGlobalProperties","trackExternalLink","on"],d=0;d<c.length;d++){var e=c[d],f=function(a){return function(){return this["_"+a]=this["_"+a]||[],this["_"+a].push(arguments),this}};b[a].prototype[e]=f(e)}var g=document.createElement("script");g.type="text/javascript",g.async=!0,g.src="https://d26b395fwzu5fz.cloudfront.net/3.0.4/keen.min.js";var h=document.getElementsByTagName("script")[0];h.parentNode.insertBefore(g,h)}}("Keen",this);
 
       // Configure the Keen object with your Project ID and access keys.
-      var keenclient = new Keen({
+      var client = new Keen({
         projectId: "<your project ID!>",    // <===== Put Info Here!!
         readKey: "<your read key!>"         // <===== Put Info Here!!
       });
@@ -95,7 +95,7 @@
             eventCollection: "<your collection name!>" // You need to enter the name of your collection in order to count how many events happened!
         });
 
-        keenclient.draw(metric1, document.getElementById("chart1"), {
+        client.draw(metric1, document.getElementById("chart1"), {
           chartType: "metric",
           title: "A cool title"
         });
